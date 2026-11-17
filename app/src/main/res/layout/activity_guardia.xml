@@ -5,14 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp"
-    android:background="#121214">
+    android:padding="24dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="REGISTRO DE GUARDIAS"
-        android:textColor="#A29BFE"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp"/>
@@ -22,8 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Nombre del efectivo"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#75757A"
         android:backgroundTint="#6C5CE7"
         android:inputType="textPersonName"
         android:layout_marginBottom="16dp"/>
@@ -40,7 +36,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="En guardia"
-        android:textColor="#FFFFFF"
         android:layout_marginBottom="32dp"/>
 
     <Button

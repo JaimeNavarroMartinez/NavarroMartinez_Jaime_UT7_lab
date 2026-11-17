@@ -24,5 +24,31 @@ class GuardiaActivity : AppCompatActivity() {
         spRango = findViewById(R.id.spRango)
         swEstado = findViewById(R.id.swEstado)
         btnGuardar = findViewById(R.id.btnGuardar)
+
+        btnGuardar.setOnClickListener {
+            val nombre = etSoldado.text.toString().trim()
+
+            if (nombre.isNotEmpty()) {
+                val prefs = getSharedPreferences("RegistroGuardia", Context.MODE_PRIVATE)
+                val editor = prefs.edit()
+                editor.putString("KEY_SOLDADO", nombre)
+                editor.putInt("KEY_RANGO", spRango.selectedItemPosition)
+                editor.putBoolean("KEY_ESTADO", swEstado.isChecked)
+                editor.apply()
+
+                etSoldado.text.clear()
+                Toast.makeText(this, "Datos guardados", Toast.LENGTH_SHORT).show()
+            } else {
+                etSoldado.error = "El nombre no puede estar vacío"
+            }
+        }
     }
-}
+
+    override fun onResume() {
+        super.onResume()
+        val prefs = getSharedPreferences("RegistroGuardia", Context.MODE_PRIVATE)
+
+        etSoldado.setText(prefs.getString("KEY_SOLDADO", ""))
+        spRango.setSelection(prefs.getInt("KEY_RANGO", 0))
+        swEstado.isChecked = prefs.getBoolean("KEY_ESTADO", false)
+    }}

@@ -1,6 +1,8 @@
 package com.example.navarromartinez_jaime_ut7_lab9
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,13 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val btnIrGuardia = findViewById<Button>(R.id.btnIrGuardia)
+
+        btnIrGuardia.setOnClickListener {
+            val intent = Intent(this, GuardiaActivity::class.java)
+            startActivity(intent)
         }
     }
 }
