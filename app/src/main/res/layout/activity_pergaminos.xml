@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Laboratorio número 2 de la unidad de trabajo número 7
+     Autor: Jaime Navarro Martínez
+     Fecha: 21/11/2026 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PERGAMINOS DE LA CIUDADELA"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/etNombreArchivo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nombre del archivo (ej: cronica.txt)"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etContenido"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Escribe aquí el pergamino..."
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnGuardarInterno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar en memoria interna"/>
+
+    <Button
+        android:id="@+id/btnLeerInterno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leer de memoria interna"/>
+
+    <Button
+        android:id="@+id/btnGuardarExterno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar en memoria externa"/>
+
+    <Button
+        android:id="@+id/btnLeerExterno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leer de memoria externa"/>
+
+</LinearLayout>

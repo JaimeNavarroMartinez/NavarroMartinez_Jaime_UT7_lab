@@ -20,9 +20,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         val btnIrGuardia = findViewById<Button>(R.id.btnIrGuardia)
+        val btnIrPergaminos = findViewById<Button>(R.id.btnIrPergaminos)
 
         btnIrGuardia.setOnClickListener {
             val intent = Intent(this, GuardiaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnIrPergaminos.setOnClickListener {
+            val intent = Intent(this, PergaminosActivity::class.java)
             startActivity(intent)
         }
     }
